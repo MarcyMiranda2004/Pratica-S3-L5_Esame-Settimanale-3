@@ -372,7 +372,7 @@ const person = {
   city: "Milano",
 };
 
-console.log(deleteProp(person, "age")); // Rimuove la proprietà 'age'
+console.log(deleteProp(person, "age"));
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
