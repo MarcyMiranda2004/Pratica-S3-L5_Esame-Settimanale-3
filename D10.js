@@ -568,6 +568,12 @@ console.log(addClass());
   ***
 
 */ console.log("----------------Esercizio 27----------------");
+const halfTree = (number3) => {
+  for (let i = 1; i <= number3; i++) {
+    console.log("*".repeat(i));
+  }
+};
+halfTree(5);
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -580,7 +586,27 @@ console.log(addClass());
   *****
 
 */ console.log("----------------Esercizio 28----------------");
+const tree = (height) => {
+  for (let i = 1; i <= height; i++) {
+    let space = " ".repeat(height - i); // qui è bastato aggiungere dello spazio e modificare come vengono stampati gli asterischi, ogni riga è composta da 5 caratteri, che possono essere spazzi o *, ogni piano che viene stampato, toglie uno spazio e aggiunge un *, infatti ogni piano in modo esponenziale "height diminuisce di 1, mentre sempre in modo esponenziale, la stampa di * aumenta di 1"
+    let star = "*".repeat(2 * i - 1);
+    console.log(space + star);
+  }
+};
+tree(5);
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */ console.log("----------------Esercizio 29----------------");
+const isItPrime = (number) => {
+  if (number <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    // per puro caso e fortuna gia conoscevo il Math.sqrt, altrimenti non lo avrei mai finito in tempo, per fare i primi 2 extra ci ho messo quasi tutto il tempo rimanente
+    if (number % i === 0) {
+      return `false, ${number} non è un numero primo`;
+    }
+  }
+  return `true, ${number} è un numero primo`;
+};
+console.log(isItPrime(7));
+console.log(isItPrime(6));
